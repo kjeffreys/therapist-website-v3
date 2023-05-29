@@ -6,7 +6,8 @@ import Resources from './components/Resources';
 import Services from './components/Services';
 import About from './components/About';
 
-const App: React.FC = () => {
+const App: React.FC = () =>
+{
   return (
     <Router>
       <DefaultLayout>
