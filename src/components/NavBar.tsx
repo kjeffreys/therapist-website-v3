@@ -14,7 +14,7 @@ const NavBar: React.FC = () =>
     return (
         <nav className={`navbar ${isNavOpen ? 'open' : ''}`}>
             <Link to="/" className="logo">
-                Joanna Jeffreys, LHMC
+                Joanna Jeffreys, LMHC
             </Link>
             <div className="nav-toggle" onClick={toggleNav}>
                 <span className={`toggle-icon ${isNavOpen ? 'open' : ''}`}></span>
