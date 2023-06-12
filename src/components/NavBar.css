@@ -1,71 +1,117 @@
 .navbar {
-display: flex;
-justify-content: space-between;
-align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav-toggle {
-display: none;
-cursor: pointer;
-padding: 5px;
-background-color: transparent;
-border: none;
+    display: none;
+    cursor: pointer;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
 }
 
 .toggle-icon {
-display: block;
-width: 20px;
-height: 2px;
-background-color: #333;
-transition: transform 0.3s ease;
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #333;
+    transition: transform 0.3s ease;
 }
 
 .toggle-icon.open {
-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 .nav-links {
-display: flex;
-list-style: none;
+    display: flex;
+    list-style: none;
 }
 
 .nav-links li {
-margin-left: 20px;
+    margin-left: 20px;
 }
 
 .nav-links a {
-text-decoration: none;
-color: #333;
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-links a:hover {
+    color: #555;
+    text-decoration: underline;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    background-color: black;
+    height: 4px;
+    width: 36px;
+    margin: 3px;
+    border-radius: 10px;
+}
+
+.navbar .hamburger {
+    display: none;
 }
 
 @media screen and (max-width: 768px) {
+    .navbar .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar .hamburger:hover {
+        cursor: pointer;
+    }
+
     .nav-toggle {
         display: block;
         /* display in top right corner */
-        position: absolute;
+        position: fixed;
         top: 10px;
         right: 10px;
     }
 
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
+    .nav-links {
+        display: none;
     }
 
-    .nav-links {
-        display: block;
+    .navbar.open {
+        background-color: #333;
+        height: 100vh;
+        display: flex;
         flex-direction: column;
-        position: absolute;
-        top: 100%;
+        align-items: flex-start;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        z-index: 2;
+        top: 0;
         left: 0;
+        width: 100vw;
+    }
+
+    .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         width: 100%;
-        padding: 10px;
-        background-color: #f2f2f2;
-        z-index: 1;
-        position: relative;
+        height: 70%;
+        text-align: center;
     }
 
     .nav-links li {
         margin: 5px 0;
+
+    }
+
+    .nav-links a {
+        color: white;
     }
 }

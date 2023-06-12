@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './NavBar.css';
+import Hamburger from './Hamburger';
 
 const NavBar: React.FC = () =>
 {
@@ -17,9 +18,12 @@ const NavBar: React.FC = () =>
                 Joanna Jeffreys, LMHC
             </Link>
             <div className="nav-toggle" onClick={toggleNav}>
-                <span className={`toggle-icon ${isNavOpen ? 'open' : ''}`}></span>
+                {/* add {`nav-toggle ? 'open' : ''} logic for ham <-> X */}
+                <span className="nav-toggle" onClick={toggleNav}>
+                    <Hamburger />
+                </span>
             </div>
-            <ul className="nav-links">
+            <ul className={`nav-links ${isNavOpen ? 'open' : ''}`}>
                 <li>
                     <Link to="/" onClick={toggleNav}>
                         Home
