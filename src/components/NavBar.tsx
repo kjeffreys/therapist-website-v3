@@ -13,39 +13,42 @@ const NavBar: React.FC = () =>
     };
 
     return (
-        <nav className={`navbar ${isNavOpen ? 'open' : ''}`}>
-            <Link to="/" className="logo">
-                Joanna Jeffreys, LMHC
-            </Link>
-            <div className="nav-toggle" onClick={toggleNav}>
-                {/* add {`nav-toggle ? 'open' : ''} logic for ham <-> X */}
-                <span className="nav-toggle" onClick={toggleNav}>
-                    <Hamburger />
-                </span>
-            </div>
-            <ul className={`nav-links ${isNavOpen ? 'open' : ''}`}>
-                <li>
-                    <Link to="/" onClick={toggleNav}>
-                        Home
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/resources" onClick={toggleNav}>
-                        Resources
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/services" onClick={toggleNav}>
-                        Services
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/about" onClick={toggleNav}>
-                        About
-                    </Link>
-                </li>
-            </ul>
-        </nav>
+        <>
+            <nav className={`navbar ${isNavOpen ? 'open' : ''}`}>
+                <Link to="/" className="logo">
+                    Joanna Jeffreys, LMHC
+                </Link>
+                <div className="nav-toggle" onClick={toggleNav}>
+                    {/* add {`nav-toggle ? 'open' : ''} logic for ham <-> X */}
+                    <span className="nav-toggle" onClick={toggleNav}>
+                        <Hamburger />
+                    </span>
+                </div>
+                <ul className={`nav-links ${isNavOpen ? 'open' : ''}`}>
+                    <li>
+                        <Link to="/" onClick={toggleNav}>
+                            Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/resources" onClick={toggleNav}>
+                            Resources
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/services" onClick={toggleNav}>
+                            Services
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/about" onClick={toggleNav}>
+                            About
+                        </Link>
+                    </li>
+                </ul>
+            </nav>
+            <div className={`overlay ${isNavOpen ? 'active' : ''}`} onClick={toggleNav}></div>
+        </>
 
     );
 };
