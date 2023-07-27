@@ -1,0 +1,16 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-container h2 {
+    color: #6565ce;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 20px;
+    }
+}
