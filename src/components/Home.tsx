@@ -16,11 +16,6 @@ const Home: React.FC = () =>
       </div>
       {/* Main landing page content */}
       <div className="main-content">
-        <h1>Thank you for visiting Joanna Jeffreys, LMHC</h1>
-        <p className="subtitle">
-          Providing compassionate counseling for a healthier mind and happier life
-        </p>
-
         <div className="resources-section">
           <h2>Resources</h2>
           <p>

@@ -1,3 +1,18 @@
+.logo-two-line {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    color: #6565ce;
+    /* Green */
+    text-align: center;
+}
+
+.logo-two-line .lmhc {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #808080;
+    /* Gray */
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;

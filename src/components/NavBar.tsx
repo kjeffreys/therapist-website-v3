@@ -16,7 +16,7 @@ const NavBar: React.FC = () =>
         <>
             <nav className={`navbar ${isNavOpen ? 'open' : ''}`}>
                 <Link to="/" className="logo">
-                    Joanna Jeffreys, LMHC
+                    <h1 className="logo-two-line">Joanna Jeffreys<br /><span className="lmhc">LMHC</span></h1>
                 </Link>
                 <div className="nav-toggle" onClick={toggleNav}>
                     {/* add {`nav-toggle ? 'open' : ''} logic for ham <-> X */}

@@ -1,3 +1,8 @@
+h2 {
+  color: #6565ce;
+  /* Lavender */
+}
+
 .hero {
   position: relative;
   display: flex;
